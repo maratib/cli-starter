@@ -2,6 +2,7 @@
   "name": "cli",
   "version": "0.0.1",
   "license": "MIT",
+  "type": "module",
   "main": "dist/index",
   "types": "dist/index",
   "description": "Firebase, NestJS, ",
@@ -17,7 +18,7 @@
     "module"
   ],
   "bin": {
-    "cli": "./lib/index.js"
+    "cli": "./dist/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,11 +26,15 @@
     "prepublish": "npm run build"
   },
   "devDependencies": {
+    "@types/chalk": "^2.2.4",
     "@types/node": "^22.10.1",
     "rimraf": "^6.0.1",
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "chalk": "^5.3.0",
+    "clear": "^0.1.0",
+    "commander": "^12.1.0",
     "figlet": "^1.8.0"
   }
 }
