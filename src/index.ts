@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { version } from '../package.json';
 import clear from 'clear';
 import chalk from 'chalk';
 import figlet from 'figlet';
@@ -13,8 +14,7 @@ console.log(
         figlet.textSync('my-cli', { horizontalLayout: 'full' })
     )
 );
-
-console.log("Hello CLI World");
+console.log(chalk.green(`Version : ${version}`))
 
 export function addition(a: number, b: number): number {
     return a + b;

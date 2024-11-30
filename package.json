@@ -29,6 +29,7 @@
   },
   "scripts": {
     "dev": "tsx ./src/index.ts",
+    "pre": "yarn build && cli",
     "test": "mocha",
     "prepublish": "npm run build",
     "build": "tsup",
