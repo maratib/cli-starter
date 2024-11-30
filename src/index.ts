@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import clear from 'clear';
 import chalk from 'chalk';
 import figlet from 'figlet';
@@ -9,6 +10,12 @@ clear();
 
 console.log(
     chalk.red(
-        figlet.textSync('pizza-cli', { horizontalLayout: 'full' })
+        figlet.textSync('my-cli', { horizontalLayout: 'full' })
     )
 );
+
+console.log("Hello CLI World");
+
+export function addition(a: number, b: number): number {
+    return a + b;
+}

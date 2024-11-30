@@ -1,11 +1,12 @@
 {
-  "name": "cli",
+  "name": "cli-starter",
   "version": "0.0.1",
   "license": "MIT",
-  "type": "module",
-  "main": "dist/index",
-  "types": "dist/index",
-  "description": "Firebase, NestJS, ",
+  "description": "Cli, Starter, ",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/user/module"
+  },
   "homepage": "https://github.com/user/module",
   "author": {
     "name": "John Doe",
@@ -17,18 +18,34 @@
     "nest firebase",
     "module"
   ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "bin": {
-    "cli": "./dist/index.js"
+    "cli": "./dist/index.mjs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf lib && tsc",
-    "prepublish": "npm run build"
+    "dev": "tsx ./src/index.ts",
+    "test": "mocha",
+    "prepublish": "npm run build",
+    "build": "tsup",
+    "local": "npm i -g . && cli"
   },
   "devDependencies": {
+    "@types/chai": "^5.0.1",
     "@types/chalk": "^2.2.4",
+    "@types/clear": "^0.1.4",
+    "@types/figlet": "^1.7.0",
+    "@types/mocha": "^10.0.10",
     "@types/node": "^22.10.1",
+    "chai": "^5.1.2",
+    "mocha": "^10.8.2",
     "rimraf": "^6.0.1",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   },
   "dependencies": {
