@@ -1,0 +1,35 @@
+{
+  "name": "cli",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "dist/index",
+  "types": "dist/index",
+  "description": "Firebase, NestJS, ",
+  "homepage": "https://github.com/user/module",
+  "author": {
+    "name": "John Doe",
+    "email": "john@doe.com",
+    "url": "http://johndoe.com/"
+  },
+  "keywords": [
+    "nest firebase module",
+    "nest firebase",
+    "module"
+  ],
+  "bin": {
+    "cli": "./lib/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf lib && tsc",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "figlet": "^1.8.0"
+  }
+}
